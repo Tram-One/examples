@@ -23,7 +23,8 @@ const tiles = [
   '/images/img_fjords_wide.jpg',
   '/images/img_mountains_wide.jpg',
   '/images/img_lights_wide.jpg'
-]
+].map(source => `https://github.com/Tram-One/examples/blob/master/apps/image-carousel/${source}?raw=true`)
+
 
 const home = (store, actions) => {
   const onSelectImage = (index) => () => {
