@@ -1,7 +1,5 @@
 const Tram = require('tram-one')
-const app = new Tram({
-  defaultRoute: '/'
-})
+const app = new Tram()
 
 const html = Tram.html({clock: require('./elements/clock')})
 
@@ -22,4 +20,4 @@ const clockFrame = (state, actions) => html`
 app.addActions({ticker: require('./actions/ticker')})
 app.addRoute('/', clockFrame)
 
-app.start('.main')
+module.exports = app

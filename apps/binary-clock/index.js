@@ -12,4 +12,4 @@ app.addActions({
   ticker: require('./actions/ticker')
 })
 
-app.start('.main')
+module.exports = app

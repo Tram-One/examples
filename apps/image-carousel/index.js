@@ -1,7 +1,5 @@
 const Tram = require('tram-one')
-const app = new Tram({
-  defaultRoute: '/'
-})
+const app = new Tram()
 
 const Image = require('./elements/Image')
 const ImageDeck = require('./elements/ImageDeck')
@@ -53,4 +51,4 @@ const home = (store, actions) => {
 app.addActions({tile: ImageCarouselActions(tiles.length)})
 app.addRoute('/', home)
 
-app.start('.main')
+module.exports = app
