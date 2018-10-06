@@ -5,7 +5,8 @@
     "start": "NODE_ENV=development webpack-dev-server --open --hot --inline=true",
     "prebuild": "cp -r ./public/ dist",
     "build": "NODE_ENV=production webpack",
-    "test": "jasmine ./specs/specs.js"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist -b gh-pages"
   },
   "keywords": [
     "tram-one"
@@ -15,6 +16,7 @@
     "@babel/preset-env": "^7.1.0",
     "babel-loader": "^8.0.4",
     "babel-polyfill": "^6.26.0",
+    "gh-pages": "^2.0.1",
     "jasmine": "^2.8.0",
     "tram-one": "^7.1.0",
     "url-listener": "^2.0.0",
